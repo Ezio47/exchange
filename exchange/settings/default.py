@@ -303,10 +303,9 @@ if all([AUTH_LDAP_SERVER_URI, LDAP_SEARCH_DN]):
     AUTH_LDAP_USER_SEARCH = LDAPSearch(LDAP_SEARCH_DN,
                                        ldap.SCOPE_SUBTREE, AUTH_LDAP_USER)
 
-# registry
+
 # NEED TO UPDATE DJANGO_MAPLOOM FOR ONLY THIS ONE VALUE
 REGISTRYURL = os.environ.get('REGISTRYURL', None)
-
 
 # If django-osgeo-importer is enabled, give it the settings it needs...
 if 'osgeo_importer' in INSTALLED_APPS:
